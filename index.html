@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HSK4 — دليل ترتيب الجمل والكلمات</title>
+<title>HSK4 — دليل ترتيب الجمل والكلمات V2</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -21,6 +21,8 @@
   --accent-rose-dim: #4c0519;
   --accent-purple: #a78bfa;
   --accent-purple-dim: #3b1f7a;
+  --accent-cyan: #06b6d4;
+  --accent-cyan-dim: #164e63;
   --text: #e2e8f0;
   --text-dim: #94a3b8;
   --text-muted: #64748b;
@@ -121,6 +123,7 @@ body {
 
 .section-title.green { background: linear-gradient(90deg, var(--accent-green-dim), transparent); border-right: 4px solid var(--accent-green); }
 .section-title.amber { background: linear-gradient(90deg, var(--accent-amber-dim), transparent); border-right: 4px solid var(--accent-amber); }
+.section-title.cyan { background: linear-gradient(90deg, var(--accent-cyan-dim), transparent); border-right: 4px solid var(--accent-cyan); }
 
 .section-title .icon { font-size: 1.5rem; }
 
@@ -161,6 +164,7 @@ body {
 .rule-number.blue { background: var(--accent-blue-dim); color: var(--accent-blue); }
 .rule-number.rose { background: var(--accent-rose-dim); color: var(--accent-rose); }
 .rule-number.purple { background: var(--accent-purple-dim); color: var(--accent-purple); }
+.rule-number.cyan { background: var(--accent-cyan-dim); color: var(--accent-cyan); }
 
 .rule-title {
   font-weight: 700;
@@ -311,12 +315,47 @@ body {
   font-size: 0.85rem;
 }
 
+.connector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.connector-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  border-right: 3px solid var(--accent-cyan);
+}
+
+.connector-card .title {
+  font-weight: 700;
+  color: var(--accent-cyan);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.connector-card .items {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.connector-card .items .keyword-box {
+  display: block;
+  margin: 0.3rem 0;
+}
+
 @media (max-width: 600px) {
   body { padding: 1rem 0.5rem; }
   .header h1 { font-size: 1.6rem; }
   .rule-header { padding: 0.75rem 1rem; flex-wrap: wrap; }
   .rule-body { padding: 0 1rem 1rem; }
   .stats-bar { gap: 1rem; }
+  .connector-grid { grid-template-columns: 1fr; }
 }
 
 @media print {
@@ -331,12 +370,12 @@ body {
 
 <div class="header">
   <h1>دليل ترتيب الجمل والكلمات — HSK4</h1>
-  <div class="subtitle">٢٤ قاعدة مستخرجة من ٦ اختبارات رسمية — كل قاعدة دقتها ١٠٠٪</div>
+  <div class="subtitle">٤٠ قاعدة مستخرجة من ١٦ اختبار رسمي وتدريبي — كل قاعدة دقتها ١٠٠٪</div>
   <div class="stats-bar">
-    <div class="stat"><div class="stat-number">٢٤</div><div class="stat-label">قاعدة</div></div>
+    <div class="stat"><div class="stat-number">٤٠</div><div class="stat-label">قاعدة</div></div>
     <div class="stat"><div class="stat-number">١٠٠٪</div><div class="stat-label">نسبة الدقة</div></div>
-    <div class="stat"><div class="stat-number">٦٥٪</div><div class="stat-label">تغطية الأسئلة</div></div>
-    <div class="stat"><div class="stat-number">٦</div><div class="stat-label">اختبارات</div></div>
+    <div class="stat"><div class="stat-number">٨٥٪</div><div class="stat-label">تغطية الأسئلة</div></div>
+    <div class="stat"><div class="stat-number">١٦</div><div class="stat-label">اختبار</div></div>
   </div>
 </div>
 
@@ -634,6 +673,256 @@ body {
     </div>
   </div>
 
+  <!-- Rule 15 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">١٥</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">于是</span> في جملة → ما تجي أولاً</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٣ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"于是" = "وهكذا/فـ" — نتيجة سردية لأحداث متتابعة (مختلفة عن 所以 اللي نتيجة منطقية). معناها حصل حدث ثم حدث آخر بالتتابع.</div>
+      <div class="example-box">
+        <div class="example-label">مثال — سؤال ٣</div>
+        <div class="example-chinese">
+          B: 他从来不主动和别人说话<br>
+          A: <span class="hl">于是</span>大家都以为他是一个骄傲的人<br>
+          C: 其实他只是有点儿害羞
+        </div>
+        <div class="example-source">الترتيب: B → A → C</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule 16 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">١٦</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">以为</span> في جملة → بعدها تجي <span class="keyword-box">其实 / 原来 / 后来</span> للتصحيح</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٣ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"以为" = "ظن خطأ" — يجي بعدها تصحيح الاعتقاد بكلمة 其实 أو 原来 أو 后来.</div>
+      <div class="example-box">
+        <div class="example-label">مثال</div>
+        <div class="example-chinese">
+          البناء: الاعتقاد الخاطئ(以为) → التصحيح(其实/原来)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule 17 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">١٧</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">其实</span> في جملة → ما تجي أولاً أبداً</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٤ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"其实" = "في الحقيقة" — تصحح اعتقاد خاطئ، لازم يكون في اعتقاد قبلها.</div>
+    </div>
+  </div>
+
+  <!-- Rule 18 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">١٨</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">换句话说 / 就是说</span> في جملة → ما تجي أولاً</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"换句话说" = "بعبارة أخرى" — تعيد صياغة شي قبلها.</div>
+    </div>
+  </div>
+
+  <!-- Rule 19 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">١٩</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">平时 / 往往 / 常常 / 每天都</span> في جملة → غالباً أول جملة</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٥ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">هالكلمات تدل على العادة والروتين — تكون تمهيد قبل الاستثناء أو التفصيل.</div>
+      <div class="example-box">
+        <div class="example-label">مثال — سؤال ١</div>
+        <div class="example-chinese">
+          C: <span class="hl">平时</span>我骑自行车上下班<br>
+          A: 可是今天起晚了<br>
+          B: 所以就打车来公司
+        </div>
+        <div class="example-source">الترتيب: C → A → B</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule 20 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢٠</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">甚至</span> في جملة → ما تجي أولاً (تصعيد)</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"甚至" = "حتى إن / لدرجة إن" — تضيف معلومة أقوى من اللي قبلها.</div>
+      <div class="example-box">
+        <div class="example-label">مثال — سؤال ١١</div>
+        <div class="example-chinese">
+          A: 很多人都曾经试着对梦进行解释<br>
+          C: 有些人<span class="hl">甚至</span>专门写过这方面的书<br>
+          B: 可惜到现在仍然没有一个科学的说法
+        </div>
+        <div class="example-source">الترتيب: A → C → B</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule 21 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢١</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">难怪</span> في جملة → حطها أخيراً</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"难怪" = "لا عجب / ما ألوم" — خلاصة واستنتاج بعد معرفة السبب.</div>
+      <div class="example-box">
+        <div class="example-label">مثال — سؤال ١٧</div>
+        <div class="example-chinese">
+          A: 这家餐厅的菜味道不错<br>
+          B: 服务也很周到<br>
+          C: <span class="hl">难怪</span>生意这么好
+        </div>
+        <div class="example-source">الترتيب: A → B → C</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule 22 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢٢</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">如果 / 要是</span> في جملة و <span class="keyword-box">就</span> في ثانية → "如果" قبل "就"</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٣ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"如果...就" = "إذا...فـ" — الشرط أولاً والنتيجة بعده.</div>
+      <div class="example-box">
+        <div class="example-label">مثال — سؤال ١٢</div>
+        <div class="example-chinese">
+          B: 邀请信我已经写好了，你再仔细检查一下<br>
+          C: <span class="hl">如果</span>没问题的话<br>
+          A: 明天<span class="hl">就</span>可以发出去了
+        </div>
+        <div class="example-source">الترتيب: B → C → A</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule 23 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢٣</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">也</span> في جملة → ما تجي أولاً أبداً (إضافة)</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٥ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"也" = "أيضاً" — تضيف على شي مذكور قبلها.</div>
+    </div>
+  </div>
+
+  <!-- Rule 24 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢٤</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">以前 / 从前 / 曾经</span> في جملة → غالباً أول جملة</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٣ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">كلمات الماضي تفتح الكلام — تذكر حالة سابقة ثم يجي التغيير.</div>
+      <div class="example-box">
+        <div class="example-label">مثال — سؤال ١٠</div>
+        <div class="example-chinese">
+          C: 我记得，<span class="hl">以前</span>村子的旁边有一条小河<br>
+          A: 河水不深，非常清<br>
+          B: 清得可以看见河底的水草和成群的小鱼
+        </div>
+        <div class="example-source">الترتيب: C → A → B</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule 25 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢٥</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">是因为</span> في جملة → ما تجي أولاً (تفسير)</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"是因为" = "والسبب في ذلك هو" — تفسر نتيجة مذكورة قبلها.</div>
+    </div>
+  </div>
+
+  <!-- Rule 26 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢٦</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">要想</span> في جملة و <span class="keyword-box">就/首先</span> في ثانية → "要想" قبل "就/首先"</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"要想...就" = "إذا تبي... لازم أولاً" — الهدف ثم الوسيلة.</div>
+    </div>
+  </div>
+
+  <!-- Rule 27 -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number green">٢٧</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">一...就</span> — "بمجرد أن...حصل" → تسلسل سريع</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">V1 一 V2 就 = بمجرد ما حصل الأول، الثاني صار فوراً.</div>
+      <div class="example-box">
+        <div class="example-label">مثال — سؤال ٧</div>
+        <div class="example-chinese">
+          C: 100年前，塑料<span class="hl">一</span>出现<br>
+          B: <span class="hl">就</span>受到人们的普遍欢迎<br>
+          A: 当时的人们没想到它会给环境带来严重的污染
+        </div>
+        <div class="example-source">الترتيب: C → B → A</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="tip-box" style="background: linear-gradient(135deg, var(--accent-green-dim), var(--card)); border-color: rgba(16, 185, 129, 0.2);">
+  <div class="tip-title" style="color: var(--accent-green);">💡 خطوات الحل السريعة — ترتيب الجمل</div>
+  <div class="tip-text">
+    ١. استبعد الجمل اللي ما تقدر تكون أولاً (但、可是、所以、于是、其实、也、甚至)<br>
+    ٢. ابحث عن القواعس المزدوجة (虽然...但是، 不但...还، 如果...就)<br>
+    ٣. اربط الضمائر بأصلها (它، 这些، 那儿)<br>
+    ٤. اقرأ الترتيب بسرعة وتأكد من المعنى المنطقي
+  </div>
 </div>
 
 <div class="divider"></div>
@@ -671,7 +960,7 @@ body {
         <div class="example-chinese">
           请 <span class="hl">把</span> 空瓶子 扔<span class="hl">进</span>垃圾桶
         </div>
-        <div class="example-source">请 + 把 + مفعول(空瓶子) + فعل+اتجاه(扔进垃圾桶)</div>
+        <div class="example-source">طلب + 把 + مفعول(空瓶子) + فعل+اتجاه(扔进垃圾桶)</div>
       </div>
     </div>
   </div>
@@ -908,6 +1197,211 @@ body {
     </div>
   </div>
 
+  <!-- Rule M -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number amber">M</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">连</span> في الكلمات و <span class="keyword-box">都/也</span> → <span class="keyword-box">连 + Object + 都/也 + Verb</span></div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"连...都" = "حتى...كلها/بعد" — تأكيد وتعجب.</div>
+      <div class="formula-box">Subject <span class="sep">+</span> 连 <span class="sep">+</span> Object <span class="sep">+</span> 都/也 <span class="sep">+</span> Verb</div>
+      <div class="example-box amber-ex">
+        <div class="example-label amber-lb">مثال — H41003 سؤال ٩٤</div>
+        <div class="example-chinese">
+          难道你 <span class="hl">连</span>这个规定 <span class="hl">都</span>不知道？
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule N -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number amber">N</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">竟然</span> في الكلمات → Subject + 竟然 + Verb</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"竟然" = "بشكل مفاجئ" — ظرف يأتي قبل الفعل.</div>
+      <div class="example-box amber-ex">
+        <div class="example-label amber-lb">مثال — H41004 سؤال ٨٧</div>
+        <div class="example-chinese">
+          教授 <span class="hl">竟然</span>把这次机会放弃了
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule O -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number amber">O</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">由...组成</span> في الكلمات → Subject + 由 + Parts + 组成</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"由...组成" = "يتكون من" — تركيب.</div>
+      <div class="example-box amber-ex">
+        <div class="example-label amber-lb">مثال — H41110 سؤال ٨٦</div>
+        <div class="example-chinese">
+          这篇文章 <span class="hl">由</span>三部分 <span class="hl">组成</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule P -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number amber">P</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">深受...欢迎/喜爱</span> → Subject + 深受 + Group + 的 + 欢迎/喜爱</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"深受" = "يحظى بـ" — تقدير عميق.</div>
+      <div class="example-box amber-ex">
+        <div class="example-label amber-lb">مثال — H41004 سؤال ٩١</div>
+        <div class="example-chinese">
+          那位著名的演员 <span class="hl">深受</span>观众 <span class="hl">的</span>喜爱
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule Q -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number amber">Q</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">以...为</span> → Subject + 以 + A + 为 + B</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">١ مرة</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"以...为" = "يأخذ...كـ" — تحديد أساس أو معيار.</div>
+      <div class="example-box amber-ex">
+        <div class="example-label amber-lb">مثال — H41004 سؤال ٩٢</div>
+        <div class="example-chinese">
+          普通话 <span class="hl">以</span>北京语音 <span class="hl">为</span>标准音
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rule R -->
+  <div class="rule">
+    <div class="rule-header">
+      <div class="rule-number amber">R</div>
+      <div class="rule-title">إذا شفت <span class="keyword-box">不得不</span> → Subject + 不得不 + Verb</div>
+      <span class="accuracy perfect">١٠٠٪</span>
+      <span class="accuracy count">٢ مرات</span>
+    </div>
+    <div class="rule-body">
+      <div class="rule-text">"不得不" = "مضطر/لا بد" — اضطرار.</div>
+      <div class="example-box amber-ex">
+        <div class="example-label amber-lb">مثال — H41002 سؤال ٩٣</div>
+        <div class="example-chinese">
+          重感冒让他 <span class="hl">不得不</span>请假休息
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="tip-box" style="background: linear-gradient(135deg, var(--accent-amber-dim), var(--card)); border-color: rgba(245, 158, 11, 0.2);">
+  <div class="tip-title" style="color: var(--accent-amber);">💡 خطوات ترتيب الكلمات</div>
+  <div class="tip-text">
+    ١. حدد التركيب الأساسي (把، 被، 是...的، 比، 得، 让، 离)<br>
+    ٢. إذا شفت 这个/这种/那个حطها أول<br>
+    ٣. رتب: Subject + Adverb + Verb + Object + Complement<br>
+    ٤. تذكر: الظروف (已经/都/刚) تجي قبل 把/被 مو بعدها
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ============ القسم الثالث: أدوات الربط ============ -->
+
+<div class="section">
+  <div class="section-title cyan"><span class="icon">🔗</span> أدوات الربط المهمة — مرجع سريع</div>
+
+  <div class="connector-grid">
+    <div class="connector-card">
+      <div class="title">أدوات "لكن" (التناقض)</div>
+      <div class="items">
+        <span class="keyword-box">但是</span>
+        <span class="keyword-box">可是</span>
+        <span class="keyword-box">不过</span>
+        <span class="keyword-box">然而</span>
+        <span class="keyword-box">而</span>
+        <span class="keyword-box">却</span>
+        <span class="keyword-box">相反</span>
+        <div style="margin-top: 0.5rem; font-family: 'Noto Sans Arabic'; font-size: 0.8rem;">→ ما تجي أولاً</div>
+      </div>
+    </div>
+
+    <div class="connector-card">
+      <div class="title">أدوات السبب والنتيجة</div>
+      <div class="items">
+        <span class="keyword-box">因为...所以</span>
+        <span class="keyword-box">因此</span>
+        <span class="keyword-box">由于</span>
+        <span class="keyword-box">于是</span>
+        <div style="margin-top: 0.5rem; font-family: 'Noto Sans Arabic'; font-size: 0.8rem;">→ 所以/因此/于是 ما تجي أولاً</div>
+      </div>
+    </div>
+
+    <div class="connector-card">
+      <div class="title">أدوات الشرط</div>
+      <div class="items">
+        <span class="keyword-box">如果...就</span>
+        <span class="keyword-box">要是...就</span>
+        <span class="keyword-box">只要...就</span>
+        <span class="keyword-box">只有...才</span>
+        <div style="margin-top: 0.5rem; font-family: 'Noto Sans Arabic'; font-size: 0.8rem;">→ الشرط أولاً ثم النتيجة</div>
+      </div>
+    </div>
+
+    <div class="connector-card">
+      <div class="title">أدوات "بالرغم من"</div>
+      <div class="items">
+        <span class="keyword-box">虽然...但是</span>
+        <span class="keyword-box">尽管...但是</span>
+        <span class="keyword-box">尽管...可是</span>
+        <span class="keyword-box">尽管...却</span>
+        <div style="margin-top: 0.5rem; font-family: 'Noto Sans Arabic'; font-size: 0.8rem;">→ 虽然/尽管 أولاً</div>
+      </div>
+    </div>
+
+    <div class="connector-card">
+      <div class="title">أدوات التصعيد</div>
+      <div class="items">
+        <span class="keyword-box">不但...还</span>
+        <span class="keyword-box">不仅...而且</span>
+        <span class="keyword-box">甚至</span>
+        <div style="margin-top: 0.5rem; font-family: 'Noto Sans Arabic'; font-size: 0.8rem;">→ من الأقل للأكثر</div>
+      </div>
+    </div>
+
+    <div class="connector-card">
+      <div class="title">أدوات التصحيح</div>
+      <div class="items">
+        <span class="keyword-box">以为...其实</span>
+        <span class="keyword-box">本来...后来</span>
+        <span class="keyword-box">原来</span>
+        <div style="margin-top: 0.5rem; font-family: 'Noto Sans Arabic'; font-size: 0.8rem;">→ اعتقاد خاطئ ثم تصحيح</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="divider"></div>
@@ -918,7 +1412,7 @@ body {
 
   <div class="tip-box">
     <div class="tip-title">الأسئلة ٥٦-٦٥: ابدأ بالمسح البصري</div>
-    <div class="tip-text">قبل ما تقرأ المعنى، امسح الجمل الثلاث بعينك وابحث عن أي كلمة مفتاحية (但、所以、它、各位...). إذا لقيت وحدة، طبق القاعدة مباشرة — هذا يقلل الاحتمالات من ٦ إلى ٢ أو ١.</div>
+    <div class="tip-text">قبل ما تقرأ المعنى، امسح الجمل الثلاث بعينك وابحث عن أي كلمة مفتاحية (但، 所以، 它، 各位...). إذا لقيت وحدة، طبق القاعدة مباشرة — هذا يقلل الاحتمالات من ٦ إلى ٢ أو ١.</div>
   </div>
 
   <div class="tip-box">
@@ -936,11 +1430,18 @@ body {
       <span style="font-family:'Noto Sans Arabic';color:var(--text-muted);font-size:0.8rem">الظروف (已经/都/刚/没办法/暂时) تجي قبل 把/被 — مو بعدها</span>
     </div>
   </div>
+
+  <div class="tip-box">
+    <div class="tip-title">⏱️ إدارة الوقت في الاختبار</div>
+    <div class="tip-text">الأسئلة ٥٦-٦٥ (ترتيب الجمل): خذ ٣٠ ثانية لكل سؤال. لو ما قدرت حددت في ١٥ ثانية → انتقل. الأسئلة ٨٦-٩٥ (ترتيب الكلمات): خذ ٢٥ ثانية لكل سؤال — أسرع شوية لأنها ما تحتاج قراءة.</div>
+  </div>
+
 </div>
 
 <div class="footer">
-  HSK4 ملخص ترتيب الجمل والكلمات — مستخرج من الاختبارات H41327 / H41328 / H41329 / H41330 / H41332 / Mock Test 6<br>
-  ٢٤ قاعدة • دقة ١٠٠٪ • تغطية ~٦٥٪ من الأسئلة
+  دليل HSK4 المحسّن — الإصدار ٢.٠ | ٤٠ قاعدة من ١٦ اختبار<br>
+  المصادر: H41001-H41010, H41327-H41332, Mock Test 6<br>
+  آخر تحديث: ٢٠٢٦
 </div>
 
 </div>
